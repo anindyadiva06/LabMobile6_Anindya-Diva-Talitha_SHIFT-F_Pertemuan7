@@ -1,0 +1,7 @@
+{
+  "name": "praktikum_ionic1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
