@@ -15,7 +15,72 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <!-- Section: Profile -->
+    <ng-container *ngIf="folder === 'profile'">
+      <strong class="capitalize">About Me!</strong>
+      <p>This is my short profile</p>
+      <div id="card">
+        <div id="highlights">
+          <ion-card style="width: 100%;">
+            <ion-card-header>
+              <ion-card-title>Here's Diva's Profile!</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ul>
+                <li><strong>Name:</strong> Anindya Diva Talitha</li>
+                <li><strong>NIM:</strong> H1D022026</li>
+                <li><strong>University:</strong> Jenderal Soedirman University</li>
+                <li><strong>Birthdate:</strong> 06 October 2004</li>
+              </ul>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- Section: Home -->
+    <ng-container *ngIf="folder === 'home'">
+      <div id="highlights">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Today's Highlights</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ul>
+              <li><strong>Quote of the Day:</strong> "Hard Work Pays Off!"</li>
+              <li><strong>Today’s Goal:</strong> Complete 3 tasks</li>
+              <li><strong>Today's song:</strong> Pueblo - Wave to Earth</li>
+            </ul>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <div id="recent-activities">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>To-Do List</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ul>
+              <li>Go to the gym</li>
+              <li>Dinner with friends</li>
+              <li>Take out the trash</li>
+            </ul>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <div id="quick-links">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Menu</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button expand="block" color="primary" routerLink="/folder/home">Home</ion-button>
+            <ion-button expand="block" color="secondary" routerLink="/folder/profile">Profile</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ng-container>
   </div>
 </ion-content>
